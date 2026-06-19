@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Libris Morrinhos (Goiás)</title>
+  <meta name="description" content="Enciclopédia digital livre dedicada à documentação, preservação e divulgação do conhecimento relacionado ao município de Morrinhos, Estado de Goiás.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="componentes/css/index.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@18.0.5/lib/marked.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.4.10/dist/purify.min.js"></script>
+</head>
+<body>
+
+<div class="card">
+
+  <header class="card-header">
+    <div class="blog-title"><a href="/">Libris Morrinhos (Goiás)</a></div>
+    <div class="blog-subtitle">Enciclopédia digital livre dedicada à Morrinhos.</div>
+  </header>
+
+  <nav class="card-nav" id="card-nav">
+    <a href="/" id="nav-all">Todos os artigos</a>
+  </nav>
+
+  <div class="card-body">
+
+    <main class="card-main" id="card-main">
+      <p class="state-msg">Carregando o último artigo publicado recentemente...</p>
+    </main>
+
+    <aside class="card-sidebar">
+      <div class="sidebar-block">
+        <div class="sidebar-label">Categorias</div>
+        <ul class="cat-list" id="cat-list">
+          <li><span class="state-msg">Carregando categorias...</span></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+
+  <footer class="card-footer">
+    &copy; <span id="footer-year"></span> Projeto Libris. Todos os direitos reservados.
+  </footer>
+</div>
+
+  <script src="componentes/js/main.js"></script>
+</body>
+</html>
