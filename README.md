@@ -125,7 +125,7 @@ Contribuições podem incluir:
 * Revisão editorial;
 * Envio de documentação e fotografias antigas.
 
-[Pull Requests]([https:https://github.com/projeto-libris/libris-morrinhos-go/pulls), [Issues](https://github.com/projeto-libris/libris-morrinhos-go/issues) e sugestões são bem-vindos.
+[Pull Requests](https://github.com/projeto-libris/libris-morrinhos-go/pulls), [Issues](https://github.com/projeto-libris/libris-morrinhos-go/issues) e sugestões são bem-vindos.
 
 Toda contribuição poderá ser analisada antes de sua incorporação final ao projeto.
 
