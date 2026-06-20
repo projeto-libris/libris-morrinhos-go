@@ -27,7 +27,7 @@ const SUPABASE_URL     = 'https://kkveyupjkgewelovwzgw.supabase.co';
 
     const [{ data: categories }, { data: allPostsMini }] = await Promise.all([
       sb.from('categories').select('id, name, slug').order('name'),
-      sb.from('posts').select('category_id')
+      sb.from('artigo').select('category_id')
     ]);
 
     const countMap = {};
@@ -110,7 +110,7 @@ const SUPABASE_URL     = 'https://kkveyupjkgewelovwzgw.supabase.co';
           <div class="section-label">Artigos publicados anteriormente</div>
           ${older.map(p => `
             <div class="post-list-item">
-              <a class="post-list-title" href="?post=${p.slug}">${p.title}</a>
+              <a class="post-list-title" href="?artigo=${p.slug}">${p.title}</a>
               <span class="post-list-date">${formatDate(p.published_at)}</span>
             </div>
           `).join('')}
@@ -138,7 +138,7 @@ const SUPABASE_URL     = 'https://kkveyupjkgewelovwzgw.supabase.co';
     const post = posts[0];
     const cat  = post.categories;
 
-    document.title = `${post.title} - Libris Itaboraí`;
+    document.title = `${post.title} - Libris Morrinhos`;
 
     main.innerHTML = `
       <a class="back-link" href="/">&larr; Todos os artigos</a>
