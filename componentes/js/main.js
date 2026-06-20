@@ -22,7 +22,7 @@ const SUPABASE_URL     = 'https://kkveyupjkgewelovwzgw.supabase.co';
 
   async function init() {
     const params   = new URLSearchParams(window.location.search);
-    const postSlug = params.get('post');
+    const postSlug = params.get('artigo');
     const catSlug  = params.get('categoria');
 
     const [{ data: categories }, { data: allPostsMini }] = await Promise.all([
