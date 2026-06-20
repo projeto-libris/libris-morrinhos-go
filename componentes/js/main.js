@@ -138,7 +138,7 @@ const SUPABASE_URL     = 'https://kkveyupjkgewelovwzgw.supabase.co';
     const post = posts[0];
     const cat  = post.categories;
 
-    document.title = `${post.title} - Libris Morrinhos`;
+    document.title = `${post.title} - Libris Morrinhos (Goiás)`;
 
     main.innerHTML = `
       <a class="back-link" href="/">&larr; Todos os artigos</a>
