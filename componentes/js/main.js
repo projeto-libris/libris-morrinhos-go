@@ -107,7 +107,7 @@ const SUPABASE_URL     = 'https://kkveyupjkgewelovwzgw.supabase.co';
     if (older.length) {
       html += `
         <div class="older-posts">
-          <div class="section-label">Artigos postados anteriormente</div>
+          <div class="section-label">Artigos publicados anteriormente</div>
           ${older.map(p => `
             <div class="post-list-item">
               <a class="post-list-title" href="?post=${p.slug}">${p.title}</a>
