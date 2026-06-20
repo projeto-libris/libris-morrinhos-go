@@ -27,7 +27,7 @@ const SUPABASE_URL     = 'https://kkveyupjkgewelovwzgw.supabase.co';
 
     const [{ data: categories }, { data: allPostsMini }] = await Promise.all([
       sb.from('categories').select('id, name, slug').order('name'),
-      sb.from('artigo').select('category_id')
+      sb.from('posts').select('category_id')
     ]);
 
     const countMap = {};
