@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Libris Morrinhos (Goiás)</title>
-  <meta name="description" content="Enciclopédia digital livre dedicada à documentação, preservação e divulgação do conhecimento relacionado ao município de Morrinhos, Estado de Goiás.">
+  <meta name="description" content="Enciclopédia digital livre dedicada à documentação, preservação e divulgação do conhecimento relacionado ao município de Morrinhos, no Estado de Goiás.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
@@ -19,11 +19,19 @@
 
   <header class="card-header">
     <div class="blog-title"><a href="/">Libris Morrinhos (Goiás)</a></div>
-    <div class="blog-subtitle">Enciclopédia digital livre dedicada à Morrinhos.</div>
+    <div class="blog-subtitle">Enciclopédia digital livre dedicada à Morrinhos (Goiás).</div>
   </header>
 
   <nav class="card-nav" id="card-nav">
-    <a href="/" id="nav-all">Todos os artigos</a>
+    <div class="nav-links" id="nav-links">
+      <a href="/" id="nav-all">Todos os artigos</a>
+    </div>
+    <form class="search-form" id="search-form" role="search">
+      <input type="text" id="search-input" name="busca" placeholder="Pesquisar artigos..." aria-label="Pesquisar artigos" autocomplete="off">
+      <button type="submit" aria-label="Buscar">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+    </form>
   </nav>
 
   <div class="card-body">
