@@ -20,10 +20,32 @@ const SUPABASE_URL     = 'https://kkveyupjkgewelovwzgw.supabase.co';
     return DOMPurify.sanitize(html);
   }
 
+  function normalize(str) {
+    return (str || '')
+      .toString()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .trim();
+  }
+
+  function escapeHtml(str) {
+    return (str || '').toString()
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
   async function init() {
-    const params   = new URLSearchParams(window.location.search);
-    const postSlug = params.get('artigo');
-    const catSlug  = params.get('categoria');
+    const params      = new URLSearchParams(window.location.search);
+    const postSlug    = params.get('artigo');
+    const catSlug     = params.get('categoria');
+    const searchQuery = params.get('busca');
+
+    const searchInput = document.getElementById('search-input');
+    if (searchInput && searchQuery) searchInput.value = searchQuery;
 
     const [{ data: categories }, { data: allPostsMini }] = await Promise.all([
       sb.from('categories').select('id, name, slug').order('name'),
@@ -38,7 +60,9 @@ const SUPABASE_URL     = 'https://kkveyupjkgewelovwzgw.supabase.co';
     buildNav(categories || [], catSlug, postSlug);
     buildSidebar(categories || [], countMap);
 
-    if (postSlug) {
+    if (searchQuery) {
+      await viewSearch(searchQuery);
+    } else if (postSlug) {
       await viewPost(postSlug);
     } else if (catSlug) {
       await viewCategory(catSlug, categories || []);
@@ -48,7 +72,7 @@ const SUPABASE_URL     = 'https://kkveyupjkgewelovwzgw.supabase.co';
   }
 
   function buildNav(categories, activeCat, activePost) {
-    const nav = document.getElementById('card-nav');
+    const nav = document.getElementById('nav-links');
     const allLink = document.getElementById('nav-all');
 
     if (!activeCat && !activePost) allLink.classList.add('active');
@@ -164,7 +188,7 @@ const SUPABASE_URL     = 'https://kkveyupjkgewelovwzgw.supabase.co';
     if (error) { main.innerHTML = `<p class="state-msg">Erro: ${error.message}</p>`; return; }
 
     const catName = found ? found.name : catSlug;
-    document.title = `${catName} - Libris Itaboraí`;
+    document.title = `${catName} - Libris Morrinhos (Goiás)`;
 
     let html = `
       <a class="back-link" href="/">&larr; Todos os artigos</a>
@@ -183,6 +207,69 @@ const SUPABASE_URL     = 'https://kkveyupjkgewelovwzgw.supabase.co';
     }
 
     main.innerHTML = html;
+  }
+
+  async function viewSearch(rawQuery) {
+    const main = document.getElementById('card-main');
+
+    const query = normalize(rawQuery);
+    if (!query) { await viewHome(); return; }
+
+    main.innerHTML = '<p class="state-msg">Buscando...</p>';
+
+    const { data: posts, error } = await sb
+      .from('posts')
+      .select('title, slug, excerpt, content, published_at');
+
+    if (error) { main.innerHTML = `<p class="state-msg">Erro: ${error.message}</p>`; return; }
+
+    document.title = `Pesquisa: ${rawQuery} - Libris Morrinhos (Goiás)`;
+
+    if (!posts || !posts.length) {
+      main.innerHTML = `<a class="back-link" href="/">&larr; Todos os artigos</a><p class="state-msg">Nenhum artigo encontrado para "${escapeHtml(rawQuery)}".</p>`;
+      return;
+    }
+
+    const queryWords = query.split(/\s+/).filter(Boolean);
+
+    function wordScore(normText, weightExact, weightSubstr) {
+      if (!normText) return 0;
+      let score = 0;
+      queryWords.forEach(w => {
+        const escaped = w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const re = new RegExp(`\\b${escaped}\\b`);
+        if (re.test(normText)) score += weightExact;
+        else if (normText.includes(w)) score += weightSubstr;
+      });
+      return score;
+    }
+
+    const scored = posts.map(p => {
+      const nTitle   = normalize(p.title);
+      const nExcerpt = normalize(p.excerpt);
+      const nContent = normalize(p.content);
+
+      let score = 0;
+      if (nTitle === query) score += 100;
+      else if (nTitle.includes(query)) score += 60;
+      score += wordScore(nTitle, 15, 8);
+
+      if (nExcerpt.includes(query)) score += 5;
+      score += wordScore(nExcerpt, 3, 1);
+
+      if (nContent.includes(query)) score += 2;
+      score += wordScore(nContent, 1, 0.5);
+
+      return { post: p, score };
+    })
+    .filter(s => s.score > 0)
+    .sort((a, b) => b.score - a.score || new Date(b.post.published_at) - new Date(a.post.published_at));
+
+    if (scored.length) {
+      window.location.replace(`?post=${scored[0].post.slug}`);
+    } else {
+      main.innerHTML = `<a class="back-link" href="/">&larr; Todos os artigos</a><p class="state-msg">Nenhum artigo encontrado para "${escapeHtml(rawQuery)}".</p>`;
+    }
   }
 
   init().catch(err => {
