@@ -1,4 +1,4 @@
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       background: rgb(0, 128, 1);
@@ -44,6 +44,14 @@
       padding: 0 40px;
       border-bottom: 1px solid #d0d0d0;
       display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links {
+      display: flex;
       flex-wrap: wrap;
       gap: 0;
     }
@@ -58,6 +66,40 @@
 
     .card-nav a:hover { text-decoration: underline; }
     .card-nav a.active { color: #1f1f1f; font-weight: 600; text-decoration: none; cursor: default; }
+
+    .search-form {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 0;
+    }
+
+    .search-form input {
+      border: none;
+      border-bottom: 1px solid #d0d0d0;
+      background: transparent;
+      font-family: 'Lora', serif;
+      font-size: 0.83rem;
+      padding: 4px 2px;
+      width: 170px;
+      color: #1f1f1f;
+    }
+
+    .search-form input:focus { outline: none; border-bottom-color: rgb(224, 0, 0); }
+    .search-form input::placeholder { color: #bbb; }
+
+    .search-form button {
+      background: none;
+      border: none;
+      color: #888;
+      cursor: pointer;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .search-form button:hover { color: rgb(224, 0, 0); }
 
     .card-body {
       display: flex;
@@ -238,6 +280,8 @@
       .card { box-shadow: none; }
       .card-header { padding: 22px 20px 18px; }
       .card-nav { padding: 0 20px; }
+      .search-form { width: 100%; padding: 4px 0 8px; }
+      .search-form input { flex: 1 1 auto; width: auto; }
       .card-body { flex-direction: column; }
       .card-main { padding: 26px 20px 30px; border-right: none; border-bottom: 1px solid #d0d0d0; }
       .card-sidebar { width: 100%; padding: 24px 20px 8px; }
