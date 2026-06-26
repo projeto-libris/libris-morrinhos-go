@@ -287,3 +287,54 @@
       .card-sidebar { width: 100%; padding: 24px 20px 8px; }
       .card-footer { padding: 14px 20px; }
     }
+      .card-sidebar { width: 100%; padding: 24px 20px 8px; }
+      .card-footer { padding: 14px 20px; }
+    }
+
+    .card-body.is-maintenance .card-main {
+      border-right: none;
+    }
+
+    .card-body.is-maintenance .card-sidebar {
+      display: none;
+    }
+
+    .maintenance-block {
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .maintenance-icon {
+      font-size: 2.4rem;
+      margin-bottom: 16px;
+    }
+
+    .maintenance-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1f1f1f;
+      margin-bottom: 10px;
+    }
+
+    .maintenance-msg {
+      font-size: 0.95rem;
+      color: #777;
+      max-width: 420px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .maintenance-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1f1f1f;
+      margin-bottom: 10px;
+    }
+
+    .maintenance-msg {
+      font-size: 0.95rem;
+      color: #777;
+      max-width: 420px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
