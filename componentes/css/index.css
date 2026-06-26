@@ -287,9 +287,6 @@
       .card-sidebar { width: 100%; padding: 24px 20px 8px; }
       .card-footer { padding: 14px 20px; }
     }
-      .card-sidebar { width: 100%; padding: 24px 20px 8px; }
-      .card-footer { padding: 14px 20px; }
-    }
 
     .card-body.is-maintenance .card-main {
       border-right: none;
