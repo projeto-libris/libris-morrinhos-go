@@ -1,75 +1,78 @@
 ================================================================================
-LICENÇA DE USO DE CONTEÚDO - PROJETO LIBRIS 1.0
+  LICENÇA DE USO DE CONTEÚDO E MARCA - PROJETO LIBRIS (VERSÃO MULTI-REGIONAL)
 ================================================================================
-
 Copyright (c) 2026 Projeto Libris. Todos os direitos reservados.
 
-É concedida permissão a qualquer pessoa que obtenha uma cópia desta obra literária, 
-informativa e de seus arquivos de dados associados (doravante denominados "Conteúdo"), 
-para usar, estudar, modificar, adaptar e distribuir o referido Conteúdo, de acordo 
-com as estipulações e condições especificadas abaixo.
+É concedida permissão a qualquer pessoa que obtenha uma cópia desta obra 
+literária, informativa, código-fonte e de seus arquivos de dados associados 
+(doravante denominados "Conteúdo"), para usar, estudar, modificar, adaptar e 
+distribuir o referido Conteúdo, de acordo com as estipulações e condições 
+especificadas abaixo.
 
 ================================================================================
-1. DIREITOS E USOS PERMITIDOS
+1. DIREITOS E USOS PERMITIDOS DO CONTEÚDO
 ================================================================================
-
 Qualquer pessoa física ou jurídica está autorizada a:
-
 * Utilizar o Conteúdo para fins acadêmicos, pessoais, educacionais ou comerciais;
 * Modificar, traduzir, adaptar e criar obras derivadas com base no Conteúdo;
-* Redistribuir versões originais ou modificadas do Conteúdo;
-* Submeter correções, atualizações e colaborações para a base de dados oficial.
+* Redistribuir versões originais ou modificadas do Conteúdo, respeitando as 
+  regras de marca estabelecidas na Seção 2.
 
 ================================================================================
-2. RESTRIÇÃO EXCLUSIVA DE NOMENCLATURA E IDENTIDADE
+2. REGULAMENTO EXCLUSIVO DE MARCA E IDENTIDADE REGIONAL
 ================================================================================
+Os termos "Libris", "Projeto Libris" e suas variações são marcas de identidade 
+exclusiva da iniciativa central. A permissão para o uso do nome em projetos 
+derivados fica condicionada estritamente às seguintes regras:
 
-Os termos, títulos e marcas nominativas listados a seguir são de propriedade 
-intelectual e identidade exclusivas da iniciativa Projeto Libris:
+A) USO COMERCIAL OU TOTALMENTE INDEPENDENTE (SEM VÍNCULO)
+Se o usuário modificar o projeto para fins comerciais próprios ou não desejar 
+integrar a rede oficial da comunidade:
+* É obrigatória a remoção imediata de qualquer menção textual ou de identidade 
+  visual que possa induzir o público a presumir a existência de afiliação, 
+  endosso ou vínculo oficial com o Projeto Libris.
+* Fica proibido o uso isolado dos termos "Libris" ou "Projeto Libris" como 
+  nome principal ou identidade do novo produto/serviço.
 
-* Libris
-* Projeto Libris
-* Libris Itaboraí
-* Libris Tanguá
-* Libris Rio Bonito
-* Libris Morrinhos (Goiás)
-
-Obras derivadas, compilações independentes, ramificações (forks) ou redistribuições 
-parciais ou totais deste Conteúdo não poderão utilizar as nomenclaturas acima 
-citadas sem a prévia autorização expressa e por escrito dos mantenedores do projeto.
-
-É obrigatória a remoção de qualquer menção textual ou de identidade visual que 
-possa induzir o público a presumir, de forma razoável, a existência de afiliação, 
-endosso ou vínculo oficial com o Projeto Libris.
+B) USO COMUNITÁRIO AUTORIZADO
+É autorizada a criação de ramificações comunitárias, regionais, locais ou de 
+projetos sem fins lucrativos, desde que adotem estritamente a seguinte estrutura 
+de nomenclatura e exibição de identidade:
+* O nome do projeto derivado deve obrigatoriamente seguir o padrão de estrutura 
+  "LIBRIS [NOME DA CIDADE/REGIÃO/TEMA]" (Ex: Libris Tech, Libris para Alunos, 
+  Libris Regional, Libris Educação).
+* Toda página pública do projeto derivado deve exibir de forma visível em seu 
+  rodapé (footer) a seguinte declaração de atribuição e vinculação:
+  "Este projeto é uma ramificação comunitária independente baseada no Libris 
+  Base e faz parte da família de enciclopédias gerais Libris. Conteúdo original 
+  sob propriedade do Projeto Libris."
 
 ================================================================================
 3. REGULAMENTO DE CONTRIBUIÇÕES TERCEIRAS
 ================================================================================
-
 Os usuários são facultados a submeter relatórios de erros, revisões históricas, 
-atualizações de dados ou sugestões de melhoria editorial aos mantenedores.
-
-Toda e qualquer contribuição voluntária submetida passará a integrar o acervo do 
+atualizações de dados ou sugestões de melhoria editorial aos mantenedores. Toda 
+e qualquer contribuição voluntária submetida passará a integrar o acervo do 
 projeto sob as diretrizes desta mesma licença. Os mantenedores reservam-se o 
 direito exclusivo de revisar, aceitar, alterar ou rejeitar as contribuições.
 
 ================================================================================
 4. EXCLUSÃO DE GARANTIAS E LIMITAÇÃO DE RESPONSABILIDADE
 ================================================================================
-
-ESTE CONTEÚDO É DISPONIBILIZADO "NO ESTADO EM QUE SE ENCONTRA", SEM QUALQUER TIPO 
-DE GARANTIA EXPRESSA OU IMPLÍCITA, INCLUINDO, MAS NÃO SE LIMITANDO A, GARANTIAS 
-DE EXATIDÃO, INTEGRALIDADE OU ADEQUAÇÃO A UM FIM ESPECÍFICO.
+ESTE CONTEÚDO E CÓDIGO-FONTE SÃO DISPONIBILIZADOS "NO ESTADO EM QUE SE 
+ENCONTRAM", SEM QUALQUER TIPO DE GARANTIA EXPRESSA OU IMPLÍCITA, INCLUINDO, 
+MAS NÃO SE LIMITANDO A, GARANTIAS DE EXATIDÃO, INTEGRALIDADE OU ADEQUAÇÃO A UM 
+FIM ESPECÍFICO. 
 
 EM NENHUMA HIPÓTESE OS AUTORES OU DETENTORES DOS DIREITOS AUTORAIS PODERÃO SER 
 RESPONSABILIZADOS POR QUAISQUER REIVINDICAÇÕES, DANOS, PERDAS OU OUTRAS 
 RESPONSABILIDADES CIVIS DECORRENTES DO USO, MANUSEIO OU DA CONFIANÇA NAS 
-INFORMAÇÕES CONSTANTES NESTA OBRA.
+INFORMAÇÕES CONSTANTES NESTA OBRA OU EM SUAS RAMIFICAÇÕES REGIONAIS.
 
 ================================================================================
 5. CLÁUSULA DE ACEITAÇÃO INTEGRAL
 ================================================================================
-
 A utilização, reprodução, modificação, distribuição ou colaboração com este 
-Conteúdo implica na aceitação automática, irrestrita e irrevogável de todas as 
-cláusulas contratuais presentes neste instrumento legal.
+Conteúdo ou código-fonte implica na aceitação automática, irrestrita e 
+irrevogável de todas as cláusulas contratuais presentes neste instrumento legal.
+================================================================================
